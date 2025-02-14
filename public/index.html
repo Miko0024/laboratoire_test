@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Gestionnaire de Tâches</title>
+    <style>
+        .hidden { display: none; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <div id="auth-section">
+        <h2>Authentification</h2>
+        <form id="auth-form">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit" id="login-btn">Se connecter</button>
+            <button type="submit" id="register-btn">S'inscrire</button>
+            <div class="error-message" style="display: none;">Erreur de validation</div>
+        </form>
+        <p id="auth-message"></p>
+    </div>
+
+    <div id="tasks-section" class="hidden">
+        <div class="header">
+            <button id="all-tasks-btn">Toutes les tâches</button>
+            <button id="my-tasks-btn">Mes tâches</button>
+            <button id="add-task-btn">Ajouter une tâche</button>
+            <button id="logout-btn">Se déconnecter</button>
+        </div>
+
+        <div id="task-form-container">
+            <form id="task-form">
+                <input type="text" name="taskTitle" id="task-title" placeholder="Titre de la tâche" required>
+                <textarea id="task-description" placeholder="Description (optionnelle)"></textarea>
+                <div class="form-buttons">
+                    <button type="button" id="cancel-task-btn">Annuler</button>
+                    <button type="submit">Ajouter</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="tasks-container">
+            <ul id="tasks-list"></ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
