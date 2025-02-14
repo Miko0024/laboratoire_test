@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test:e2e": "playwright test",
+    "test:e2e": "playwright test tests/e2e",
     "test:jest": "jest",
     "test:cucumber": "cucumber-js",
-    "test": "npm run test:jest && npm run test:cucumber && npm run test:e2e"
+    "test": "npm run test:jest && npm run test:cucumber && npm run test:e2e",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
